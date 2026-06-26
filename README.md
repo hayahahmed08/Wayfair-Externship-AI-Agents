@@ -103,9 +103,10 @@ The agent first identifies user intent:
 
 ### Files
 
-- [competitor_monitoring_agent.json](Competitor_Monitoring_Agent/competitor_monitoring_agent.json)
-- [competitor_monitoring_agent_output.pdf](Competitor_Monitoring_Agent/competitor_monitoring_agent_output.pdf)
-- ![wayfair_competitor_monitoring_workflow.png](Competitor_Monitoring_Agent/wayfair_competitor_monitoring_workflow.png)
+
+- [final_trend_report.pdf](Customer_Trend_Discovery_Agent/final_trend_report.pdf)
+- [market_trend_discovery_agent.json](Customer_Trend_Discovery_Agent/market_trend_discovery_agent.json)
+- ![wayfair_Trend_analysis.png](Customer_Trend_Discovery_Agent/wayfair_Trend_analysis.png)
 ---
 
 ## Agent 3: Competitor Monitoring Agent

@@ -58,8 +58,6 @@ Image generation is limited to **20 outputs per day** under the free Google Gemi
 
 ### Output
 
-`wayfair_moodboard.txt`
-
 ![Moodboard Output](Moodboard_Agent/moodboard_output.png)
 
 ---
@@ -105,7 +103,7 @@ The agent first identifies user intent:
 
 ### Outputs
 
-`Wayfair Trend Analysis.txt` | `wayfair.pdf`
+![Trend Discovery Agent Output](Customer_Trend_Discovery_Agent/final_trend_report.pdf)
 
 ---
 
@@ -133,7 +131,7 @@ The agent is prompted with real-world competitor and trend data sourced from pro
 
 ### Outputs
 
-`Wayfair_ContentAgent.txt` | `wayfaircontent.pdf`
+![AI Insight & Content Agent Output](AI_Content_and_Insights_Agent/wayfaircontent_output.pdf)
 
 ---
 

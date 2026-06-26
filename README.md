@@ -1,8 +1,6 @@
 # Wayfair Rugs Market Intelligence: AI Agent Demo
 
 **Author:** Hayah Ahmed
-**Email:** hayahahmeduser4@gmail.com
-
 ---
 
 ## Executive Summary
@@ -20,7 +18,7 @@ Built multiple interconnected AI agents orchestrated through **n8n**, forming a 
 - **Trend Discovery Agent** – Extracts emerging materials, styles, and price patterns from Wayfair listings
 - **Competitor Monitoring Agent** – Scrapes and analyzes Amazon rug listings for pricing and assortment shifts
 - **AI Insights Agent** – Converts structured signals into executive-level summaries and insights
-- **Market Intelligence Dashboard** – Consolidates outputs into a single, interpretable view
+- **Moodboard Agent** – Consolidates outputs into a single, interpretable view
 
 ### Key Insights
 
@@ -62,7 +60,7 @@ Image generation is limited to **20 outputs per day** under the free Google Gemi
 
 `wayfair_moodboard.txt`
 
-![Moodboard Output](moodboard_output.png)
+![Moodboard Output](Moodboard_Agent\moodboard_output.png)
 
 ---
 

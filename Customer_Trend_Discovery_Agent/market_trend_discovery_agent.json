@@ -215,7 +215,7 @@
           "parameters": [
             {
               "name": "Cookie",
-              "value": "i18n-prefs=USD; lc-main=en_US; session-id=141-8209501-9981461; session-id-time=2082787201l; ubid-main=134-5719883-5851066"
+              "value": "i18n-prefs=USD; lc-main=en_US; session-id=000-0000000-0000000; session-id-time=2082787201l; ubid-main=134-5719883-5851066"
             },
             {
               "name": "User-Agent",
@@ -548,7 +548,7 @@
       "name": "Google Gemini Chat Model",
       "credentials": {
         "googlePalmApi": {
-          "id": "Pm20r7ZUe86vgeuD",
+          "id": "Xq73nWsD2pKrM5tL",
           "name": "Google Gemini(PaLM) Api account"
         }
       }

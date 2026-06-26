@@ -107,7 +107,60 @@ The agent first identifies user intent:
 
 ---
 
-## Agent 3: AI Insights & Content Agent
+## Agent 3: Competitor Monitoring Agent
+
+*From Amazon Listings → Competitive Intelligence Report*
+
+### Objective
+
+To scrape and analyze Amazon rug listings for pricing, assortment shifts, and product positioning signals, then benchmark them against Wayfair products to surface whitespace opportunities and competitive gaps.
+
+### Sample Output — Product Analysis
+
+**Product:** Roehit Beige / Brown Machine Washable Performance Area Rug with Non-slip Backing
+**Category:** Rugs | **Data scraped:** 2026-01-30
+
+| Field | Details |
+|---|---|
+| SKU | W112476068 |
+| Price | $107.99 |
+| List Price | $140.99 |
+| Discount | 23% |
+| Rating | 4.5 out of 5 |
+| Review Volume | 1,504 reviews |
+| Size Options | Rectangle 8' x 10' |
+| Free Shipping | Yes (FREE 2-Day Delivery) |
+| Key Features | Low-pile, machine-washable; ideal for living room, bedroom, dining room, kitchen, hallway, kid's room, home office |
+
+### Insight Summary
+
+#### Whitespace Opportunities Where Wayfair Can Win
+
+1. **Machine-Washable Rugs** – Several top-selling Wayfair products prominently feature "machine washable" as a key attribute. This segment could be a significant whitespace if competitors are not adequately promoting or stocking such products.
+2. **Diverse Style & Material Offerings** – Wayfair shows strong variety in styles (Oriental, Abstract, Geometric, Floral, Shag, Southwestern) and materials (Polypropylene, Polyester, Cotton). Continued diversification where competitor gaps are identified could yield further opportunities.
+3. **Value-Oriented Promotions** – The high frequency of promotions suggests Wayfair is well-positioned to attract budget-conscious customers, potentially creating a whitespace if competitors struggle to match pricing strategies.
+
+#### Key Gaps in Competitor Strategy
+
+1. **Data Insufficiency** – Due to the absence of competitor product data, specific gaps in Amazon's strategy (pricing history, marketing campaigns, customer sentiment) cannot be accurately identified at this time.
+2. **Unidentified Market Segments** – Without competitive product listings, it is unclear which rug categories or customer needs Amazon might be underserving, preventing identification of Wayfair's potential advantages.
+
+### Actionable Recommendations for Wayfair
+
+1. **Prioritize "Machine Washable" Marketing** – Develop targeted campaigns and enhance product filtering/badging for machine-washable rugs, capitalizing on this unique selling point and high customer convenience demand.
+2. **Initiate Deeper Competitor Product Analysis** – Conduct further scraping or manual analysis to collect detailed product information, pricing history, and customer reviews from Amazon to identify direct competitive gaps.
+3. **Leverage Promotional Prowess Strategically** – Continue to offer competitive pricing and highlight significant discounts; analyze which product types respond best to promotions to maximize sales and market share.
+4. **Enhance Customer Review Engagement** – Implement strategies to actively solicit more reviews and leverage advanced sentiment analysis tools to extract deeper insights, informing product development and marketing messages.
+5. **Monitor Shipping Benefits** – Wayfair currently offers free 2-day delivery on many items. Monitor competitor shipping speeds and costs to ensure Wayfair maintains a competitive edge in fulfillment.
+
+### Files
+
+- `competitor_monitoring_agent.json` – n8n workflow definition
+- `competitor_monitoring_agent_output.pdf` – Sample analysis report
+
+---
+
+## Agent 4: AI Insights & Content Agent
 
 *From raw trend & competitor data to campaign-ready storytelling*
 

@@ -1,33 +1,20 @@
 {
-  "name": "Prompt Generator",
+  "name": "mood board",
   "nodes": [
     {
       "parameters": {
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
-      "typeVersion": 1.3,
-      "position": [
-        0,
-        0
-      ],
-      "id": "e4fd18af-f9c3-4e6d-9751-63925cd02e76",
-      "name": "When chat message received",
-      "webhookId": "fedae814-fb77-4fa8-86e5-461101e5f1cb"
-    },
-    {
-      "parameters": {
+        "hasOutputParser": true,
         "options": {
-          "systemMessage": "Role: You are an expert image generation prompt engineer.\n\nTask:\nYour role is to take a simple input idea (e.g., “bohemian rugs, neutral tones”) and transform it into one detailed, polished prompt for creating a high-quality moodboard.\n\nWhen creating the prompt, follow these guidelines:\n- Highlight the style, colors, and textures implied in the trend.\n- Include close-up material textures, styled interior spaces, and decor elements that complement the rug’s look.\n- Arrange visuals as a clean, inspiration-ready collection that a design team could immediately use for trend insights.\n- Ensure the final output is ready-to-use, simple, and efficient for an image generator.\nand make output not excedde two sentences"
+          "systemMessage": "Role: You are an expert image generation prompt engineer.\n\nTask:\nYour role is to take a simple input idea (e.g., “bohemian rugs, neutral tones”) and transform it into one detailed, polished prompt for creating a high-quality moodboard.\n\nWhen creating the prompt, follow these guidelines:\n- Highlight the style, colors, and textures implied in the trend.\n- Include close-up material textures, styled interior spaces, and decor elements that complement the rug’s look.\n- Arrange visuals as a clean, inspiration-ready collection that a design team could immediately use for trend insights.\n- Ensure the final output is ready-to-use, simple, and efficient for an image generator."
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 2.2,
+      "typeVersion": 3,
       "position": [
-        208,
-        0
+        -2256,
+        -240
       ],
-      "id": "1519e0f7-44e2-4374-8181-af29e021ada5",
+      "id": "388ce2ea-b6a0-4776-9f55-8978d8c23b8d",
       "name": "AI Agent"
     },
     {
@@ -37,14 +24,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
       "position": [
-        80,
-        208
+        -2192,
+        -16
       ],
-      "id": "adccf9f5-05d4-4b37-bb56-0eb84a37aaca",
-      "name": "Google Gemini Chat Model",
+      "id": "dbfb6e8a-c3d4-4126-afad-4fdcf20b32c0",
+      "name": "Google Gemini Chat Model2",
       "credentials": {
         "googlePalmApi": {
-          "id": "O9srUgzxl9yf8P1t",
+          "id": "Pm20r7ZUe86vgeuD",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -56,22 +43,22 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        560,
-        0
+        -1904,
+        -240
       ],
-      "id": "a394e16c-b7ee-4697-a75f-40172d974fae",
-      "name": "Code in JavaScript"
+      "id": "bda46fe2-dea1-4925-acfd-8d2993447c8e",
+      "name": "Clean Prompt"
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent",
+        "url": "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-latest:generateContent",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
             {
               "name": "x-goog-api-key",
-              "value": "YOUR_GEMINI_API_KEY_HERE"
+              "value": "AIzaSyAE606k0NCENDptT2dC8JwwvRrTBz_85Ds"
             },
             {
               "name": "Content-Type",
@@ -79,19 +66,17 @@
             }
           ]
         },
-        "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        { \"text\": \"{{ $json.prompt }}\" }\n      ]\n    }\n  ]\n}",
         "options": {}
       },
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
+      "typeVersion": 4.3,
       "position": [
-        768,
-        0
+        -1680,
+        -224
       ],
-      "id": "9ea0d085-abbb-4563-add6-c1ee331411f6",
-      "name": "Gemini Image Generator"
+      "id": "681a66fe-7e77-420f-b9f7-12e80da98be3",
+      "name": "HTTP Request",
+      "disabled": true
     },
     {
       "parameters": {
@@ -100,42 +85,41 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        976,
-        0
+        -1456,
+        -240
       ],
-      "id": "b7f744ed-60d5-4c29-9384-c04738df3d66",
-      "name": "Code in JavaScript1"
+      "id": "40db3c24-1a42-4a6a-a501-3e7647c753bc",
+      "name": "Debug"
     },
     {
       "parameters": {
-        "operation": "toBinary",
-        "sourceProperty": "imageBase64",
         "options": {}
       },
-      "type": "n8n-nodes-base.convertToFile",
-      "typeVersion": 1.1,
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
       "position": [
-        1184,
-        0
+        -2256,
+        -560
       ],
-      "id": "e34bfdcd-7788-4935-a6a5-cf1d949a2eff",
-      "name": "Image File Converter"
+      "id": "e71493a9-3183-4ee9-a627-5a6195d59488",
+      "name": "When chat message received",
+      "webhookId": "c626713b-e5d1-4804-864f-e78afeb159de"
     }
   ],
   "pinData": {},
   "connections": {
-    "When chat message received": {
+    "AI Agent": {
       "main": [
         [
           {
-            "node": "AI Agent",
+            "node": "Clean Prompt",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Google Gemini Chat Model": {
+    "Google Gemini Chat Model2": {
       "ai_languageModel": [
         [
           {
@@ -146,44 +130,33 @@
         ]
       ]
     },
-    "AI Agent": {
+    "Clean Prompt": {
       "main": [
         [
           {
-            "node": "Code in JavaScript",
+            "node": "HTTP Request",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Code in JavaScript": {
+    "HTTP Request": {
       "main": [
         [
           {
-            "node": "Gemini Image Generator",
+            "node": "Debug",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Gemini Image Generator": {
+    "When chat message received": {
       "main": [
         [
           {
-            "node": "Code in JavaScript1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Code in JavaScript1": {
-      "main": [
-        [
-          {
-            "node": "Image File Converter",
+            "node": "AI Agent",
             "type": "main",
             "index": 0
           }
@@ -191,15 +164,14 @@
       ]
     }
   },
-  "active": true,
+  "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "1b9ee856-ace9-4c31-af66-2821031cfe06",
+  "versionId": "c8d95573-5ed3-4c98-bf49-d264fa48d851",
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "8a56d3b38a33798173390488e49ffee59c2ed0ecbcfb581e650b40a4a873a153"
+    "instanceId": "3cca3870de79c697863d5b7d1f7ba10f1576ccc5e5da5bd734830e882e794cf6"
   },
-  "id": "H5eu5QFoEWxD9ysl",
+  "id": "K7Dxm9GCjfhNPIAa",
   "tags": []
 }

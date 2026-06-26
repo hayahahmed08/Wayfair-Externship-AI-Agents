@@ -31,7 +31,7 @@
       "name": "Google Gemini Chat Model2",
       "credentials": {
         "googlePalmApi": {
-          "id": "Pm20r7ZUe86vgeuD",
+          "id": "Xq73nWsD2pKrM5tL",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -58,7 +58,7 @@
           "parameters": [
             {
               "name": "x-goog-api-key",
-              "value": "AIzaSyAE606k0NCENDptT2dC8JwwvRrTBz_85Ds"
+              "value": "AIzaSyXk9mR2pL4nQwT7vB1dC5JhyUeZs3Fy8Kp"
             },
             {
               "name": "Content-Type",

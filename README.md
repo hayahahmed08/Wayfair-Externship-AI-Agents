@@ -60,7 +60,7 @@ Image generation is limited to **20 outputs per day** under the free Google Gemi
 
 `wayfair_moodboard.txt`
 
-![Moodboard Output](Moodboard_Agent\moodboard_output.png)
+![Moodboard Output](Moodboard_Agent/moodboard_output.png)
 
 ---
 

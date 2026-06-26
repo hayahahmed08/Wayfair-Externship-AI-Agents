@@ -101,10 +101,11 @@ The agent first identifies user intent:
 - Include Wayfair internal search data
 - Track repeated customer questions
 
-### Outputs
+### Files
 
-![Trend Discovery Agent Output](Customer_Trend_Discovery_Agent/final_trend_report.pdf)
-
+- [competitor_monitoring_agent.json](Competitor_Monitoring_Agent/competitor_monitoring_agent.json)
+- [competitor_monitoring_agent_output.pdf](Competitor_Monitoring_Agent/competitor_monitoring_agent_output.pdf)
+- ![wayfair_competitor_monitoring_workflow.png](Competitor_Monitoring_Agent/wayfair_competitor_monitoring_workflow.png)
 ---
 
 ## Agent 3: Competitor Monitoring Agent
@@ -155,9 +156,10 @@ To scrape and analyze Amazon rug listings for pricing, assortment shifts, and pr
 
 ### Files
 
-- `competitor_monitoring_agent.json` – n8n workflow definition
-- `competitor_monitoring_agent_output.pdf` – Sample analysis report
 
+- [competitor_monitoring_agent.json](Competitor_Monitoring_Agent/competitor_monitoring_agent.json)
+- [competitor_monitoring_agent_output.pdf](Competitor_Monitoring_Agent/competitor_monitoring_agent_output.pdf)
+- ![wayfair_competitor_monitoring_workflow.png](Competitor_Monitoring_Agent/wayfair_competitor_monitoring_workflow.png)
 ---
 
 ## Agent 4: AI Insights & Content Agent
@@ -182,10 +184,11 @@ The agent is prompted with real-world competitor and trend data sourced from pro
 - Integrate live trend APIs and Wayfair internal performance data to minimize reliance on assumed signals
 - Expand output with stronger brand-voice controls, multi-channel content formats, and feedback loops driven by campaign performance
 
-### Outputs
+### Files
 
-![AI Insight & Content Agent Output](AI_Content_and_Insights_Agent/wayfaircontent_output.pdf)
-
+- [ai_insights_content_agent.json](AI_Content_and_Insights_Agent/ai_insights_content_agent.json)
+- [wayfaircontent_output.pdf](AI_Content_and_Insights_Agent/wayfaircontent_output.pdf)
+- ![wayfair_Ai_insight_workflow.png](AI_Content_and_Insights_Agent/wayfair_Ai_insight_workflow.png)
 ---
 
 ## Reflections & Future Improvements
